@@ -4,6 +4,7 @@ body {
     background: #e3e3e3;
     color: #333;
     font-family: 'Open Sans', sans-serif;
+    min-width: 1092px;
 }
 p, h1, h2, h3, h4, h5, h6 {
     margin: 0;
@@ -25,6 +26,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 main {
     width: 1092px;
+    min-width: 1092px;
     background-color: #fff;
     display: flex;
 }
@@ -498,7 +500,7 @@ p.board {
 }
 a.dl-resume {
     color: #ef5700;
-    position: absolute;
+    position: fixed;
     right: 2%;
     top: 2%;
     font-size: 65px;

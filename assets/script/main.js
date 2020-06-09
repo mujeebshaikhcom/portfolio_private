@@ -1,5 +1,3 @@
-
-
 $(document).ready(function(){
     
     app.mobileMenu();
@@ -127,7 +125,6 @@ var app = {
             $('#indulgeModal').fadeIn('fast').css('display','flex');
             $('body').css('overflow','hidden');
             setTimeout(playVideo, 400);
-            
         });
         $(document).on('keyup', function(e) { 
             if (e.key == "Escape") { 
@@ -171,7 +168,4 @@ function onPlayerStateChange(e) {
 }
 function playVideo() {
     player.playVideo();
-    $('iframe').contents().find('.ytp-swatch-background-color').css({
-        'background-color' : '#f00999'
-    });
 }

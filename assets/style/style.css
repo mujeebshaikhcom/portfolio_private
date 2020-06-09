@@ -650,12 +650,6 @@ span.arr {
     width: 100%;
     height: 100%;
 }
-body .html5-video-player {
-    background-color: #fff;
-}
-.ytp-swatch-background-color {
-    background-color: #f00999;
-}
 @media only screen and (max-width: 1200px) {
     h1.bigWeb {
         font-size: 200px;
