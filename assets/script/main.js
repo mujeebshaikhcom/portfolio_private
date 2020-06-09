@@ -117,5 +117,61 @@ var app = {
                 $('.curr-step').html(stepNo);
             }
         });
+        $('#closeVid').on('click', function(){
+            $('#indulgeModal').fadeOut('fast');
+            $('body').css({'overflow':'inherit','overflow-x':'hidden'});
+            player.stopVideo();
+        });
+        $('#indulgeVidMod').on('click', function(e){
+            e.preventDefault();
+            $('#indulgeModal').fadeIn('fast').css('display','flex');
+            $('body').css('overflow','hidden');
+            setTimeout(playVideo, 400);
+            
+        });
+        $(document).on('keyup', function(e) { 
+            if (e.key == "Escape") { 
+                $('#closeVid').click();
+                $('#closeForm').click();
+            } 
+        }); 
     }
+        
+}
+
+//Youtube video player.
+var tag = document.createElement('script');
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var player;
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+    videoId: '4-GMGyH9dGw',
+    playerVars: {
+        color: 'white',
+        rel: 0
+    },
+    events: {
+        'onReady': onPlayerReady,
+        'onStateChange': onPlayerStateChange
+    }
+    });
+}
+
+function onPlayerReady() {}
+function onPlayerStateChange(e) {
+    if(e.data === 0){
+        player.playVideo();
+    }
+}
+function playVideo() {
+    player.playVideo();
+    $('iframe').contents().find('.ytp-swatch-background-color').css({
+        'background-color' : '#f00999'
+    });
 }
