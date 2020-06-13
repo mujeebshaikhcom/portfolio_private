@@ -441,6 +441,7 @@ section#contact {
     padding: 16px;
     margin: 32px 0 50px;
     display: none;
+    text-align: center;
 }
 .contact-steps:last-child {
     line-height: 40px;
@@ -604,6 +605,13 @@ span.arr {
 .cardTxt>.logo {
     transform: translateX(50%) translateZ(20px) translateY(100%);
     align-self: flex-start;
+}
+#indulgeVidMod .cardTxt>.logo {
+    transform: translateX(-50%) translateZ(40px) translateY(-50%);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    opacity: 0.7;
 }
 .cardTxt>.lWrap {
     align-self: flex-end;
