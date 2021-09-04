@@ -132,6 +132,7 @@ var app = {
                 $('#closeForm').click();
             } 
         }); 
+        $('#currYear').html(new Date().getFullYear());
     }
         
 }
